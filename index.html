@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parsley</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="container">
+          <form id="demo-form" data-parsley-validate="">
+              <div class="lineForm">
+                  <label for="fullname">Username:</label>
+                  <input type="text" class="form-control" name="fullname" data-parsley-trigger="change" required="" data-parsley-minlength="4" data-parsley-maxlength="20" id="userName" data-parsley-palindrome=""/>
+              </div>
+              <div class="lineForm">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" name="email" data-parsley-trigger="change" required="" data-parsley-minlength="4" data-parsley-maxlength="20" id="userEmail"/>
+              </div>
+              <div class="lineForm">
+                  <label for="password">Password:</label>
+                  <input type="password" class="form-control" name="password" data-parsley-trigger="change" required="" data-parsley-minlength="6" data-parsley-maxlength="30" id="pass"/>
+              </div>
+              <div class="lineForm">
+                  <label for="password">Repeat password:</label>
+                  <input type="password" class="form-control" name="repeat" data-parsley-trigger="change" data-parsley-equalto="#pass" required="" data-parsley-equalto-message="The fields 'Password' and 'Repeat password' don't match" id="passRepeat"/>
+              </div>
+              <div class="lineForm">
+                  <input type="submit" class="btn btn-default inputReg" value="Register"/>
+              </div>
+          </form>
+      </div>
+  </div>
+  <div id="result"></div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="parsley.min.js"></script>
+  <script src="index.js"></script>
+  </body>
+</html>

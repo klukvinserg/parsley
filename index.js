@@ -87,7 +87,7 @@ $(document).ready(function () {
       countSymbol === 0
     ) {
       resultText = 'Easy';
-    }  else if (
+    } else if (
       countSmallLatter > 0 &&
       countBigLetter > 0 &&
       countDigits === 0 &&
@@ -147,13 +147,5 @@ $(document).ready(function () {
     $('#passRepeat').val('');
 
     $('input').removeClass('parsley-success');
-
-    console.log(countSmallLatter);
-
-    console.log(countBigLetter);
-
-    console.log(countDigits);
-
-    console.log(countSymbol);
   }
 });
